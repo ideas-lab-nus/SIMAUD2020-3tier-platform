@@ -336,8 +336,8 @@ The metadata and models are either input by the users through the presentation l
 \label{fig:relationDatabase}
 \end{figure*}
 Data exchange between the application layer and the data layer is done through RESTful API and mainly in JSON format. For example, if a user wants to see the energy consumption trend of a building, he/she will select the data point and define the time period in VPL canvas. The deep functions in the application layer will get the information and accordingly send the request. The API will retrieve data from the server and send it back as a JSON file, which will then be plotted in the canvas.
-\section{Case study} \label{section:casestudy}
-In this section, we introduce a case-study to evaluate our platform. 
+\section{Use cases} \label{section:casestudy}
+In this section, we introduce three use-cases to evaluate our platform. The first is a parametric energy simulation of a small office building from ANSI/ASHRAE/IES Standard 90.1 commercial reference buildings
 
 \section{Conclusion}
 In this paper, we explained an approach for applying Client/Server based architecture called 3-tier architecture (summarized in figure \ref{fig:structure}). This approach is used for managing data from the built environment using a cloud-based user-friendly visual programming interface. This approach depends on separating the client-side (called the presentation layer) from the back-end engines (the application layer) and the databases (the data layer). This separation eased the distribution of computation power over many nodes without compromising the efficiency of the other layers. Furthermore, it overcame some problems related to latency and connection speed. Moreover, flexibility and scalability are two key features of this type of architecture. 

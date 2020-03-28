@@ -1,39 +1,18 @@
 This repository contains the data and code for our paper:
 
 ### Title: 
-## Cloud Computing Open Platform for Building-Lifecycle Data Analysis and Energy Modelling
+## A Three-Tier Architecture Visual-Programming Platform for Building-Lifecycle Data Management
 ### Overleaf link: 
 https://www.overleaf.com/4282134423jzcxhfncqnbm
 
 
-> Authors, (YYYY). *Resilience of different technologies towards climate
-> change for Singapore*. Name of journal/book <https://doi.org/xxx/xxx>
-
-Our pre-print is online here:
-
-> Authors, (YYYY). *Resilience of different technologies towards climate
-> change for Singapore*. Name of journal/book, Accessed 05 Feb 2020.
-> Online at <https://doi.org/xxx/xxx>
-
-### How to cite
+### How to cite 
 
 Please cite this compendium as:
 
-> Authors, (2020). *Compendium of R code and data for `r Title`*.
-> Accessed 05 Feb 2020. Online at <https://doi.org/xxx/xxx>
+> Mahmoud M. Abdelrahman, Sicheng Zhan, Adrian Chong (2020). *A Three-Tier Architecture Visual-Programming Platform for Building-Lifecycle Data Management*. SimAUD2020 (preprint)
 
-### How to download or install
 
-You can download the compendium as a zip from from this URL:
-<https://github.com/ideas-lab-nus/resilience/archive/master.zip>
-
-Or you can install this compendium as an R package, resilience, from
-GitHub with:
-
-``` r
-# install.packages("remotes")
-remotes::install_github("ideas-lab-nus/resilience")
-```
 
 ### Licenses
 

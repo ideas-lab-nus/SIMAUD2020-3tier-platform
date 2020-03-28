@@ -1,0 +1,35 @@
+End-use programmer,,,engineer
+End-use programmer,,,researcher
+End-use programmer,,,planner
+End-use programmer,,,scientist
+End-use programmer,,,administrator
+End-use programmer,,,investor
+End-use programmer,,,manager
+End-use programmer,,,expert
+Viewer (Monitoring),,,occupant
+Viewer (Monitoring),,,policymaker
+Viewer (Monitoring),,,consultant
+Viewer (Monitoring),,,researcher
+Viewer (Monitoring),,,planner
+Viewer (Monitoring),,,engineer
+Viewer (Monitoring),,,client
+Viewer (Monitoring),,,scientist
+Viewer (Monitoring),,,adminstrator
+Viewer (Monitoring),,,investor
+Viewer (Monitoring),,,contractor
+Viewer (Monitoring),,,manager
+Viewer (Monitoring),,,expert
+Viewer (Monitoring),,,owner
+Viewer (Monitoring),,,consumer
+Feedback sender (data input),,,occupant
+Feedback sender (data input),,,policymaker
+Feedback sender (data input),,,consultant
+Feedback sender (data input),,,researcher
+Feedback sender (data input),,,engineer
+Feedback sender (data input),,,scientist
+Feedback sender (data input),,,provider
+Feedback sender (data input),,,supplier
+Feedback sender (data input),,,consumer
+Feedback sender (data input),,,contractor
+Feedback sender (data input),,,manager
+Feedback sender (data input),,,owner

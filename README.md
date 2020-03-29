@@ -19,8 +19,6 @@ Please cite this paper as:
 **Text and figures :**
 [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
 
-**Code :** See the [DESCRIPTION](DESCRIPTION) file
-
 
 ### Contributions
 

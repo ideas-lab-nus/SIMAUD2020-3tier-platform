@@ -132,7 +132,7 @@ colorlinks=true,
 \maketitle
 
 \begin{abstract}
-	In this paper, we present a platform that integrates three main aspects in the building industry: 1) Building data from both IoT devices and Building Management System (BMS), 2) Building Energy modeling and simulation engine, and 3)Data analysis and optimization libraries. All of which are combined in a three-tier architecture cloud platform. The platform aims to provide useful representations of the data to different stakeholders. We defined three main types of stakeholders. Each stakeholder uses the platform differently: (1) End-use programmers, who use visual programming and textual programming interfaces to perform computational tasks, (2) Dashboard viewers who are interested in viewing insightful real-time data about performance in the form of charts and diagrams, and (3) Data feedback inputters such as occupants to give feedback or fill questionnaires. The three-tier architecture enables the spatial and physical separation of the databases, the computational engines, and the user-interfaces. This separation resulted in some advantages such as flexibility, scalability (horizontal and vertical), reusability, and latency reduction. \hl{Currently, the platform is in the final stage of development. The following stage includes community testing and user experience enhancement.}
+	In this paper, we present a platform that integrates three main aspects in the building industry: 1) Building data from both IoT devices and Building Management System (BMS), 2) Building Energy modeling and simulation engine, and 3)Data analysis and optimization libraries. All of which are combined in a three-tier architecture cloud platform. The platform aims to provide useful representations of the data to different stakeholders. We defined three main types of stakeholders. Each stakeholder uses the platform differently: (1) End-use programmers, who use visual programming and textual programming interfaces to perform computational tasks, (2) Dashboard viewers who are interested in viewing insightful real-time data about performance in the form of charts and diagrams, and (3) Data feedback inputters such as occupants to give feedback or fill questionnaires. The three-tier architecture enables the spatial and physical separation of the databases, the computational engines, and the user-interfaces. This separation resulted in some advantages such as flexibility, scalability (horizontal and vertical), reusability, and latency reduction. Currently, the platform is in the final stage of the alpha release development. The following stage includes community testing and user experience enhancement.
 \end{abstract}
 
 \keywords{
@@ -255,12 +255,12 @@ Then, we identified three main data-related actions, namely, \textbf{End-use pro
 \label{sec:presentationLayer}
 The presentation layer acts as the interface for the users. Each new project has a unique global unique identification (GUID), which is stored on the data layer and could be called using its GUID. Three main functions used in the presentation layer: (1) Visual/Textual programming interface, (2) dashboards, and (3) forms are used.
 
-\begin{figure*}[h]
+\begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{imgs/platform_interface.png}
+\includegraphics[width=\columnwidth]{imgs/platform_interface.png}
 \caption{The main interface functions}
 \label{fig:platformInterface}
-\end{figure*}
+\end{figure}
 
 \subsection{VPL/TPL interface}
 Both the visual and the textual programming interface use two main languages: Python and JavaScript. However, the selection of which is based on the complexity of the task and the response time required. For example: if the component function requires a real-time reaction, then it is more suitable to use a JavaScript component/script. We refer to the component in this case as \textit{"Shallow Function"}. While if the function requires heavy calculation such as Machine Learning (ML), or Energy Simulation (ES), then Python-based components/scripts are used and are referred to as \textit{"Deep Functions"}. Examples are shown in figure \ref{fig:deep-shallow}. 
@@ -357,16 +357,14 @@ CHARACTERISTIC INFORMATION\\
 \textbf{\underline{Actor(s):}} EnergyModeller, BuildSimHub (cloud simulation engine).\\
 \textbf{\underline{Trigger:}} Firstly, the EnergyModeller should start a new project. Secondly, IDF file of the EnergyPlus model of version greater than 8.0.
 
-\underline{Description: }
+\textbf{\underline{Description: }}
 \begin{enumerate}
-    \item EnergyModeller starts a new definition (project).
+    \item EnergyModeller starts a new definition -- (Tier1 - presentation layer).
+    \item In the presentation layer, the EnergyModeller uploads the IDF file to the data layer (Tier 3) which is a scalable google cloud bucket using a file upload component (Figure \ref{fig:fileupload_comp}). This step takes place through the application layer (Tier2) which contains a Google Cloud Storage application programming interface (API) and other file validation and security checks -- an animated GIF image could be viewed \href{https://user-images.githubusercontent.com/6969514/77833649-16c24280-717a-11ea-9df1-8a5e0f7bae83.gif}{here}.
     \item The IDF file link and global unique id (GUID) are retrieved. 
-    \item EnergyModeller uploads the IDF file to the data layer (a scalable google cloud bucket) using a file upload component (Figure \ref{fig:fileupload_comp}) -- an animated GIF image could be viewed \href{https://user-images.githubusercontent.com/6969514/77833649-16c24280-717a-11ea-9df1-8a5e0f7bae83.gif}{here}.
-    
     \item EnergyModeller loads a "buildSimHub Parametric Study" component (Figure \ref{fig:parametric_study}). 
-    \item fsdfsafasdf
-    \item fsdfsafasdf
-    \item fsdfsafasdf
+    \item After running the component, a request is sent to the simulation engine in the application layer including the inputs (IDF file, project api key, and the simulation parameters). 
+    \item The output of the simulation comes in a form of JavaScript Object Notation (JSON) as well as a chart (Figure \ref{fig:plot_panel}) -- a full view of the project can be downloaded \href{https://user-images.githubusercontent.com/6969514/77868854-2ff8eb00-726f-11ea-837d-efedac7a80a5.png}{ here}. 
 \end{enumerate}
 
 \begin{figure}[h]
@@ -375,16 +373,31 @@ CHARACTERISTIC INFORMATION\\
 \label{fig:fileupload_comp}
 \end{figure}
 
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{paper_LateX/imgs/bsh_param.png}
+\caption{ Parametric simulation study: this component runs a cloud simulation engine in the application layer. The inputs are: (1) The project\_api\_key, i.e. a unique id for each simulation project, and is used to track the project and run different simulation models' progress; (2) file\_dir: which is the IDF file stored in the data layer (tier 3) in the form of a flat file; (3) The simulation parameters. After running the component, the outputs (4) come in the form of JavaScript Object Notation (JSON) object and a plot which can be displayed in a panel (Figure \ref{fig:plot_panel}) and embedded in a website.}
+\label{fig:parametric_study}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{paper_LateX/imgs/display_data_plot_json.png}
+\caption{ Display results as a chart and/or JSON tree in the presentation layer.}
+\label{fig:plot_panel}
+\end{figure}
+
 \section{Conclusion}
 In this paper, we explained an approach for applying Client/Server based architecture called 3-tier architecture (summarized in figure \ref{fig:structure}). This approach is used for managing data from the built environment using a cloud-based user-friendly visual programming interface. This approach depends on separating the client-side (called the presentation layer) from the back-end engines (the application layer) and the databases (the data layer). This separation eased the distribution of computation power over many nodes without compromising the efficiency of the other layers. Furthermore, it overcame some problems related to latency and connection speed. Moreover, flexibility and scalability are two key features of this type of architecture. 
+
+\textbf{Currently, the platform still in the final stages of developing and debugging the alpha release. The platform will be released as an open source and contributions are welcome from the community. Contribution instructions will be available on the following GitHub repository}:
+
+\href{https://github.com/ideas-lab-nus/paper-SIMAUD2020-three-tier-architecture-platform}{https://github.com/ideas-lab-nus/paper-SIMAUD2020-three-tier-architecture-platform}
 
 Future development includes enabling real-time teamwork, version controls, besides continuous testing and user-experience improvements. 
 
 \section*{ACKNOWLEDGMENTS}
-% This paper is a part of a project funded by the Ng Teng Fong Charitable Foundation (NTFCF) research funding.
-% \clearpage
-% \balance
+This paper is a part of a project funded by the Ng Teng Fong Charitable Foundation (NTFCF) research funding.
 
+\balance
 
 
 \bibliographystyle{scsBiblioStyle}

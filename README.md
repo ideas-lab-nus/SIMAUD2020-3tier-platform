@@ -22,7 +22,7 @@ Please cite this paper as:
 
 ### Contributions
 
-We welcome contributions from everyone. Please e-mail us on xxxx@xxxx.com
+We welcome contributions from everyone. Please e-mail us on adrian.chong@nus.edu.sg
 
 # Overview
 <img src="https://user-images.githubusercontent.com/6969514/77833610-ccd95c80-7179-11ea-9492-964d3a80cd81.gif" alt="drawing" height="150" width="300" border="3"/>

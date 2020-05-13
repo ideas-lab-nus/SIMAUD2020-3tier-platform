@@ -20,10 +20,12 @@ Please cite this paper as:
 
 ### Contributions
 
-We welcome contributions from everyone. Please e-mail us on adrian.chong@nus.edu.sg
+We welcome contributions from everyone. Please e-mail us on:
+
+adrian.chong@nus.edu.sg
+mahmoud@u.nus.edu
 
 # Overview
-<img src="https://user-images.githubusercontent.com/6969514/77833610-ccd95c80-7179-11ea-9492-964d3a80cd81.gif" alt="drawing" height="150" width="300" border="3"/>
 <img src="https://user-images.githubusercontent.com/6969514/77833617-dfec2c80-7179-11ea-9c56-9e8c716e1d2a.gif" alt="drawing" height="150" width="300"/>
 <img src="https://user-images.githubusercontent.com/6969514/77833637-04e09f80-717a-11ea-8b9b-2fd43ecde05c.gif" alt="drawing" height="150" width="300"/>
 <img src="https://user-images.githubusercontent.com/6969514/77833649-16c24280-717a-11ea-9df1-8a5e0f7bae83.gif" alt="drawing" height="150" width="300"/>

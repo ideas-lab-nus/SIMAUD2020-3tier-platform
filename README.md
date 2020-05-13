@@ -22,7 +22,7 @@ Please cite this paper as:
 
 We welcome contributions from everyone. Please e-mail us on:
 
-adrian.chong@nus.edu.sg
+adrian.chong@nus.edu.sg<br>
 mahmoud@u.nus.edu
 
 # Overview

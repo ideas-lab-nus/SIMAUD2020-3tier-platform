@@ -2,8 +2,6 @@ This repository contains the data and code for our paper:
 
 ### Title: 
 ## A Three-Tier Architecture Visual-Programming Platform for Building-Lifecycle Data Management
-### Overleaf link: 
-https://www.overleaf.com/4282134423jzcxhfncqnbm
 
 
 ### How to cite 

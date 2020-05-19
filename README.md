@@ -1,4 +1,4 @@
-This repository contains the data and code for our paper:
+This repository contains the data and LateX code for our paper:
 
 ### Title: 
 ## A Three-Tier Architecture Visual-Programming Platform for Building-Lifecycle Data Management
